@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Simhala Mohana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Admin Header -->
+    <header class="bg-blue-800 text-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Admin Dashboard</h1>
+            <div class="flex items-center space-x-4">
+                <span class="text-sm">Welcome, Admin</span>
+                <button class="bg-blue-700 hover:bg-blue-600 px-4 py-1 rounded">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid md:grid-cols-4 gap-6 mb-8">
+            <!-- Dashboard Cards -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-blue-600 text-3xl mb-2">
+                    <i class="fas fa-images"></i>
+                </div>
+                <h3 class="font-semibold text-lg">Gallery Images</h3>
+                <p class="text-gray-600">24 Uploaded</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-blue-600 text-3xl mb-2">
+                    <i class="fas fa-video"></i>
+                </div>
+                <h3 class="font-semibold text-lg">Videos</h3>
+                <p class="text-gray-600">12 Uploaded</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-blue-600 text-3xl mb-2">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <h3 class="font-semibold text-lg">Press Notes</h3>
+                <p class="text-gray-600">8 Published</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-blue-600 text-3xl mb-2">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="font-semibold text-lg">Upcoming Events</h3>
+                <p class="text-gray-600">5 Scheduled</p>
+            </div>
+        </div>
+
+        <!-- Content Management Sections -->
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Image Upload Section -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4">Upload Images</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Select Images</label>
+                        <input type="file" multiple class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Category</label>
+                        <select class="w-full p-2 border rounded">
+                            <option>Public Events</option>
+                            <option>Community Work</option>
+                            <option>Official Visits</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                        <i class="fas fa-upload mr-2"></i> Upload Images
+                    </button>
+                </form>
+            </div>
+
+            <!-- Video Upload Section -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4">Add Videos</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Video URL (YouTube/Vimeo)</label>
+                        <input type="text" placeholder="https://youtube.com/embed/..." class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Title</label>
+                        <input type="text" placeholder="Video title" class="w-full p-2 border rounded">
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                        <i class="fas fa-plus-circle mr-2"></i> Add Video
+                    </button>
+                </form>
+            </div>
+
+            <!-- Press Note Section -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4">Create Press Note</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Title</label>
+                        <input type="text" placeholder="Press note title" class="w-full p-2 border rounded">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Content</label>
+                        <textarea rows="4" class="w-full p-2 border rounded"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Publish Date</label>
+                        <input type="date" class="w-full p-2 border rounded">
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                        <i class="fas fa-paper-plane mr-2"></i> Publish
+                    </button>
+                </form>
+            </div>
+
+            <!-- Schedule Management Section -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4">Add Schedule Item</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Event Title</label>
+                        <input type="text" placeholder="Event name" class="w-full p-2 border rounded">
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Date</label>
+                            <input type="date" class="w-full p-2 border rounded">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2">Time</label>
+                            <input type="time" class="w-full p-2 border rounded">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Location</label>
+                        <input type="text" placeholder="Event location" class="w-full p-2 border rounded">
+                    </div>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                        <i class="fas fa-calendar-plus mr-2"></i> Add to Schedule
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-200 py-4 mt-8">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>Admin Dashboard for Simhala Mohana's Website</p>
+        </div>
+    </footer>
+</body>
+</html>
